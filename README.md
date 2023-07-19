@@ -1,0 +1,2 @@
+# wedding
+Everything wedding related
