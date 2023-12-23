@@ -6,13 +6,9 @@ export const toCountdown = ({ from = moment(), until, t }) => {
   if (!until) return "";
   if (typeof from === "string") from = moment(from);
   const targetTime = moment(until);
-  if (from.isAfter(until)) return t("countdown.thanks");
+  if (from.isAfter(until)) return "Tusen takk for at du kom, det var fantastisk";
   const timeBetween = moment.duration(targetTime.diff(from));
-  return `${timeBetween.months()} ${t(
-    "countdown.months"
-  )} ${timeBetween.days()} ${t("countdown.days")} ${timeBetween.hours()} ${t(
-    "countdown.hours"
-  )}`;
+  return `${timeBetween.months()} Måneder ${timeBetween.days()} Dager ${timeBetween.hours()} Timer`;
 };
 
 const Countdown = (props) => {
@@ -26,7 +22,7 @@ const Countdown = (props) => {
         style={{ fontSize: "30px" }}
         {...props}
       >
-        <span>&nbsp;{browser && toCountdown({ until: "2023-08-10", t }) }</span>
+        <span>&nbsp;{browser && toCountdown({ until: "2024-08-10", t }) }</span>
       </h3>
     </>
   );

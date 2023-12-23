@@ -14,7 +14,6 @@ exports.createPages = ({ actions, graphql }) => {
             id
             fields {
               slug
-              langKey
             }
             frontmatter {
               templateKey
@@ -33,14 +32,16 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach((edge) => {
       const id = edge.node.id;
+      const slug = edge.node.fields.slug;
+      const templateKey = edge.node.frontmatter.templateKey;
+
       createPage({
-        path: edge.node.fields.slug,
+        path: slug === '/index' ? '/' : slug, // Set path to '/' if slug is '/index'
         component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+          `src/templates/${String(templateKey)}.js`
         ),
         context: {
-          id,
-          langKey: edge.node.fields.langKey,
+          id
         },
       });
     });
@@ -54,7 +55,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode });
     createNodeField({
-      name: `layout`,
+      name: `slug`,
       node,
       value,
     });

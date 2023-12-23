@@ -65,7 +65,7 @@ class FormContainer extends React.Component {
     const { t } = this.props;
 
     if (dietaryRestrictions === "") {
-      dietaryRestrictions = t("form.nodietaryrestrictions");
+      dietaryRestrictions = "Ingen";
     }
     return {
       firstName,
@@ -217,7 +217,7 @@ class FormContainer extends React.Component {
       message,
     } = personInfo;
 
-    if (dietaryRestrictions === this.props.t("form.noDietaryRestrictions")) {
+    if (dietaryRestrictions === "Ingen") {
       dietaryRestrictions = "";
     }
 
@@ -273,14 +273,14 @@ class FormContainer extends React.Component {
       case "showSummary":
         switch (numGuests) {
           case 1:
-            return this.props.t("form.header.oneperson");
+            return "Du har lagt til en person.";
           default:
-            return this.props.t("form.header.morepeople", { numGuests });
+            return `Du har lagt til ${numGuests} personer.`;
         }
       case "showResult":
         switch (attending) {
           case true:
-            return this.props.t("form.cta.success");
+            return "Hurra! Vi gleder oss til å se deg/dere!";
           default:
             break;
         }
@@ -294,7 +294,7 @@ class FormContainer extends React.Component {
         }
         break;
       default:
-        return this.props.t("form.header.title");
+        return "Hedda og påls feiring den 10 August 2023!";
     }
   };
 
@@ -348,7 +348,7 @@ class FormContainer extends React.Component {
                 type="button"
                 onClick={this.handleNext}
               >
-                {this.props.t("form.cta.continue")}
+                Fortsett
                 <svg
                   width="16"
                   height="8"
@@ -383,7 +383,7 @@ class FormContainer extends React.Component {
             return (
               <div>
                 <button className="form-btn" type="submit">
-                  {this.props.t("form.cta.send")}
+                  Send svar
                   <svg
                     width="16"
                     height="8"
@@ -513,7 +513,7 @@ class FormContainer extends React.Component {
     return (
       <div className="form-container">
         <div className="form__header">
-          <h1 className="header__title">{t("form.title")}</h1>
+          <h1 className="header__title">Gjesteliste</h1>
           <p className="header__subtitle">{this.renderHeaderSubtitle()}</p>
         </div>
 

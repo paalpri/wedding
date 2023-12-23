@@ -9,7 +9,7 @@ const Result = (props) => {
     <div className="form__body">
       <div className="form__result">
         <span className="result__emoji">🎉</span>
-        <p className="result__title">{t("form.receivedRsvp")}</p>
+        <p className="result__title">Vi har mottatt et svar for</p>
         <ul className="result__guest-list">
           {props.guestInfo.map((guest) => {
             return (

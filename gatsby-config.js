@@ -9,16 +9,6 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-no-index",
     {
-      resolve: "gatsby-plugin-i18n",
-      options: {
-        langKeyForNull: languages.defaultLangKey,
-        langKeyDefault: languages.defaultLangKey,
-        languages: languages.langs,
-        useLangKeyLayout: false,
-        prefixDefault: true,
-      },
-    },
-    {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://heddaogpal.no",

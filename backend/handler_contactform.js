@@ -24,10 +24,10 @@ module.exports.submit = async (event) => {
 };
 
 const sendEmail = async function sendEmail({ name, email, message }) {
-  const ses = new AWS.SES({ region: "us-east-1" });
+  const ses = new AWS.SES({ region: "eu-north-1" });
   var params = {
     Destination: {
-      ToAddresses: ["manuel@brgr.rocks", "angelika@brgr.rocks"],
+      ToAddresses: ["primstadp@gmail.com", "heddaist@live.no"],
     },
     Message: {
       Body: {

@@ -93,7 +93,6 @@ export const IndexPageTemplate = ({
 };
 
 IndexPageTemplate.propTypes = {
-  langKey: PropTypes.string,
   image: PropTypes.object,
   imageUs: PropTypes.object,
   title: PropTypes.string,
@@ -141,15 +140,11 @@ IndexPage.propTypes = {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query IndexPageTemplate($langKey: String!) {
+  query IndexPageTemplate {
     markdownRemark(
-      fields: { langKey: { eq: $langKey } }
       frontmatter: { templateKey: { eq: "index-page" } }
     ) {
       html
-      fields {
-        langKey
-      }
       frontmatter {
         title
         image {

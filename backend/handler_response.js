@@ -44,6 +44,7 @@ module.exports.submitResponse = async (event) => {
   );
 
   await putResponse(response);
+  /*
   await sendEmail({
     firstName,
     lastName,
@@ -53,6 +54,7 @@ module.exports.submitResponse = async (event) => {
     message,
     guests,
   });
+  */
   return buildResponse(200, response);
 };
 
@@ -99,7 +101,7 @@ const sendEmail = async function sendEmail({
   message,
   guests,
 }) {
-  const ses = new AWS.SES({ region: "us-east-1" });
+  const ses = new AWS.SES({ region: "eu-north-1" });
   guests.unshift({
     firstName,
     lastName,
@@ -111,7 +113,7 @@ const sendEmail = async function sendEmail({
 
   var params = {
     Destination: {
-      ToAddresses: ["manuel@brgr.rocks", "angelika@brgr.rocks"],
+      ToAddresses: ["primstadp@gmail.com", "heddaist@live.no"],
     },
     Message: {
       Body: {
@@ -122,7 +124,7 @@ const sendEmail = async function sendEmail({
 
       Subject: { Data: `RSVP from ${firstName} ${lastName}` },
     },
-    Source: "noreply@brgr.rocks",
+    Source: "heddaist@live.no",
   };
 
   return ses.sendEmail(params).promise();

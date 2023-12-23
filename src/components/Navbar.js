@@ -45,39 +45,27 @@ function Navbar(props) {
         </div>
         <div id="navMenu" className={`navbar-menu ${navBarActiveClass}`}>
           <div className="navbar-start has-text-centered">
-            <Link className="navbar-item" to={`/${langKey}`}>
-              {props.t("navigation.home")}
+            <Link className="navbar-item" to={`/`}>
+              Hjem
             </Link>
-            <Link className="navbar-item" to={`/${langKey}/location`}>
-              {props.t("navigation.location")}
+            <Link className="navbar-item" to={`/location`}>
+              Sted
             </Link>
-            <Link className="navbar-item" to={`/${langKey}/accommodation`}>
-              {props.t("navigation.accommodation")}
+            <Link className="navbar-item" to={`/accommodation`}>
+              Overnatting
             </Link>
-            <Link className="navbar-item" to={`/${langKey}/activities`}>
-              {props.t("navigation.activities")}
+            <Link className="navbar-item" to={`/activities`}>
+              Aktiviteter
             </Link>
-            <Link className="navbar-item" to={`/${langKey}/rsvp`}>
-              {props.t("navigation.rsvp")}
+            <Link className="navbar-item" to={`/rsvp`}>
+              Svar på Invitasjon
             </Link>
-            <Link className="navbar-item" to={`/${langKey}/faq`}>
-              {props.t("navigation.faq")}
+            <Link className="navbar-item" to={`/faq`}>
+              Ofte Stilte Spørsmål
             </Link>
-            <Link className="navbar-item" to={`/${langKey}/contact`}>
-              {props.t("navigation.contact")}
+            <Link className="navbar-item" to={`/contact`}>
+              Kontakt
             </Link>
-          </div>
-          <div className="navbar-end has-text-centered">
-            {languages.langs.map((lng, i) => (
-              <Link
-                key={i}
-                className="navbar-item"
-                to={`/${lng}/${path}`}
-                onClick={() => props.i18n.changeLanguage(lng)}
-              >
-                {lng.toUpperCase()}
-              </Link>
-            ))}
           </div>
         </div>
       </div>

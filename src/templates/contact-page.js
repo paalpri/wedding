@@ -87,10 +87,13 @@ export const ContactPageTemplate = ({
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                   {title}
                 </h2>
-                <div className="tile">
-                  <p className="subtitle">{description}</p>
+                <div className="tile flex flex-column gap-2">
+                  <p>Har du spørsmål? Send Hedda eller Pål en melding på</p>
+                  <p>E-post: heddaist@live.no, primstadp@gmail.no</p>
+                  <p className="margin-bottom-2">Tlf: Hedda: 48194230 Pål: 99376055</p>
                 </div>
               </div>
+              {/*
               <div className="section">
                 <Form onSubmit={handleSubmit}>
                   <Form.Group className="mb-3" controlId="name">
@@ -158,6 +161,7 @@ export const ContactPageTemplate = ({
                   )}
                 </Form>
               </div>
+              */}
             </div>
           </div>
         </div>

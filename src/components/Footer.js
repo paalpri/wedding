@@ -22,8 +22,8 @@ function Footer(props) {
               <section className="menu">
                 <ul className="menu-list is-flex-mobile m-0">
                   <li>
-                    <Link to={`/${langKey}/imprint`} className="navbar-item">
-                      {t("navigation.imprint")}
+                    <Link to={`/imprint`} className="navbar-item">
+                      Impressum og personvern
                     </Link>
                   </li>
                 </ul>
@@ -31,23 +31,6 @@ function Footer(props) {
             </div>
             <div className="column is-4" style={{ marginTop: "-1.2em" }}>
               <section></section>
-            </div>
-            <div
-              className="column is-4 social has-text-right-tablet"
-              style={{ marginTop: "-0.5em" }}
-            >
-              <a
-                title="facebook"
-                target="_blank"
-                rel="noreferrer"
-                //href="https://www.facebook.com/groups/1435542876905661"
-              >
-                <img
-                  src={facebook}
-                  alt="Facebook"
-                  style={{ width: "1em", height: "1em" }}
-                />
-              </a>
             </div>
           </div>
         </div>

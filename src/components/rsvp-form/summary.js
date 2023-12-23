@@ -34,11 +34,11 @@ const Summary = (props) => {
                 fillRule="nonzero"
               />
             </svg>
-            {t("form.addMore")}
+            Legg til en gjest til
           </div>
         </button>
         {props.isSubmissionError && (
-          <p className="is-error">{t("form.errors.serverRequestFailed")}</p>
+          <p className="is-error">Det skjedde en feil, vennligst prøv å send inn igjen eller ta kontakt</p>
         )}
       </div>
 
