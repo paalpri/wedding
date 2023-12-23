@@ -26,7 +26,7 @@ const Countdown = (props) => {
         style={{ fontSize: "30px" }}
         {...props}
       >
-        <span>&nbsp;{browser && toCountdown({ until: "2022-09-10", t }) }</span>
+        <span>&nbsp;{browser && toCountdown({ until: "2023-08-10", t }) }</span>
       </h3>
     </>
   );

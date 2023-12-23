@@ -45,7 +45,7 @@ export const ContactPageTemplate = ({
 
       try {
         //Test http errors - https://httpstat.us/500
-        const response = await fetch("https://wedding-api.brgr.rocks/contact", {
+        const response = await fetch("https://api.heddaogpal.no/contact", {
           headers: {
             "Content-Type": "application/json",
             "X-API-KEY":

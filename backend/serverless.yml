@@ -19,7 +19,7 @@ provider:
         rateLimit: 100
 
   stage: prod
-  region: us-east-1
+  region: eu-north-1
 
   iamRoleStatements:
     - Effect: Allow
@@ -39,7 +39,7 @@ plugins:
 
 custom:
   customDomain:
-    domainName: wedding-api.brgr.rocks
+    domainName: api.heddaogpal.no
     basePath: ""
     stage: ${self:provider.stage}
 

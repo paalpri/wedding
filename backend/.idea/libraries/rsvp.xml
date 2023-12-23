@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="rsvp">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/.serverless/rsvp.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

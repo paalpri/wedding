@@ -1,0 +1,59 @@
+{
+  "langKey": "no",
+  "navigation": {
+    "home": "Hjem",
+    "location": "Sted",
+    "accommodation": "Overnatting",
+    "activities": "Aktiviteter",
+    "rsvp": "Svar på Invitasjon",
+    "faq": "Ofte Stilte Spørsmål",
+    "contact": "Kontakt",
+    "imprint": "Impressum og personvern"
+  },
+  "countdown": {
+    "months": "Måneder",
+    "days": "Dager",
+    "hours": "Timer",
+    "thanks": "Tusen takk for at du kom, det var fantastisk"
+  },
+  "form": {
+    "title": "Gjesteliste",
+    "firstName": "Fornavn",
+    "lastName": "Etternavn",
+    "guestReference": "Navn på gjest nr. {{number}}",
+    "foodPreference": "Matpreferanse",
+    "dietaryRestrictions": "Diettrestriksjoner",
+    "meat": "Kjøtt 🥩",
+    "veggie": "Vegetar 🥦",
+    "comment": "Merknader",
+    "noDietaryRestrictions": "Ingen",
+    "willYouAttend": "Vil du delta på bryllupet vårt?",
+    "yes": "Ja",
+    "no": "Nei",
+    "chooseFoodPreference": "Velg din matpreferanse:",
+    "foodAllergies": "Har du noen matallergier eller intoleranser?",
+    "foodAllergiesExamples": "For eksempel: Nøtter, gluten, sjømat, etc.",
+    "shortComment": "Ønsker du å legge igjen en kort kommentar?",
+    "receivedRsvp": "Vi har mottatt et svar for",
+    "addMore": "Legg til en gjest til",
+    "errors": {
+      "firstNameRequired": "Fornavn er påkrevd.",
+      "lastNameRequired": "Etternavn er påkrevd.",
+      "attendingRequired": "Vennligst svar om du vil delta.",
+      "eatingMeatRequired": "Fortell oss hva du foretrekker å spise."
+    },
+    "nodietaryrestrictions": "Ingen",
+    "header": {
+      "title": "Hedda og påls feiring den 10 August 2023!",
+      "oneperson": "Du har lagt til en person.",
+      "morepeople": "Du har lagt til {{numGuests}} personer."
+    },
+    "cta": {
+      "success": "Hurra! Vi gleder oss til å se deg/dere!",
+      "continue": "Fortsett",
+      "remove": "Fjern denne gjesten",
+      "send": "Send svar",
+      "home": "Bryllupsdetaljer"
+    }
+  }
+}

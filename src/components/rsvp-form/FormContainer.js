@@ -90,7 +90,7 @@ class FormContainer extends React.Component {
     try {
       //Test http errors - https://httpstat.us/500
       const response = await fetch(
-        "https://wedding-api.brgr.rocks/responses/accept",
+        "https://api.heddaogpal.no/responses/accept",
         {
           headers: {
             "Content-Type": "application/json",

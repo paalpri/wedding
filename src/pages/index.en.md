@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-title: Angelika & Manuel
+title: Hedda & Pål
 image: /img/home-tuscany.jpg
 imageUs: /img/us.jpg
 date: 10th of September 2022 in Siena

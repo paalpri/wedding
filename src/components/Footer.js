@@ -40,7 +40,7 @@ function Footer(props) {
                 title="facebook"
                 target="_blank"
                 rel="noreferrer"
-                href="https://www.facebook.com/groups/1435542876905661"
+                //href="https://www.facebook.com/groups/1435542876905661"
               >
                 <img
                   src={facebook}

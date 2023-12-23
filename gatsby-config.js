@@ -2,8 +2,8 @@ const languages = require("./src/data/languages");
 
 module.exports = {
   siteMetadata: {
-    title: "Wedding in Tuscany",
-    description: "Wedding of Angelika and Manuel in Siena.",
+    title: "Bryllup på Jæren",
+    description: "Hedda og påls bryllup på Jæren",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -21,8 +21,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://wedding.brgr.rocks",
-        sitemap: "https://wedding.brgr.rocks/sitemap.xml",
+        host: "https://heddaogpal.no",
+        sitemap: "https://heddaogpal.no/sitemap.xml",
         policy: [{ userAgent: "*", disallow: "/" }],
       },
     },

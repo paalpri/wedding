@@ -10,15 +10,14 @@ let locale = ~languages.langs.indexOf(userLang)
   : languages.defaultLangKey;
 
 const translationEN = require("./src/locales/en/translation.json");
-const translationDE = require("./src/locales/de/translation.json");
-const translationPL = require("./src/locales/pl/translation.json");
+const translationNO = require("./src/locales/no/translation.json");
 
 const pathArray = window.location.pathname.split("/");
 exports.onClientEntry = () => {
   if (window.location.pathname === "/") {
-    window.location.pathname = `/${locale}`;
+    window.location.pathname = `/`;
   } else if (pathArray.length > 1) {
-    locale = window.location.pathname.split("/")[1];
+    //locale = window.location.pathname.split("/")[1];
   }
 
   i18n.use(initReactI18next).init({
@@ -27,15 +26,11 @@ exports.onClientEntry = () => {
       en: {
         translation: translationEN,
       },
-      de: {
-        translation: translationDE,
-      },
-      pl: {
-        translation: translationPL,
+      no: {
+        translation: translationNO,
       },
     },
-    fallbackLng: "en",
-
+    fallbackLng: "no",
     interpolation: {
       escapeValue: false,
     },

@@ -2,8 +2,7 @@ const i18n = require("i18next");
 const { initReactI18next } = require("react-i18next");
 const { renderToString } = require("react-dom/server");
 const translationEN = require("./src/locales/en/translation.json");
-const translationDE = require("./src/locales/de/translation.json");
-const translationPL = require("./src/locales/pl/translation.json");
+const translationNO = require("./src/locales/no/translation.json");
 
 exports.replaceRenderer = ({
   bodyComponent,
@@ -19,17 +18,14 @@ exports.replaceRenderer = ({
         en: {
           translation: translationEN,
         },
-        de: {
-          translation: translationDE,
-        },
-        pl: {
-          translation: translationPL,
-        },
+        no: {
+          translation: translationNO,
+        }
       },
-      fallbackLng: "en",
+      fallbackLng: "no",
       interpolation: {
         escapeValue: false,
-      },
+      }
     })
     .then(() => {
       i18n.changeLanguage(lang);
