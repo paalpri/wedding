@@ -315,14 +315,14 @@ class FormContainer extends React.Component {
                       type="button"
                       onClick={this.handleRemoveGuest}
                     >
-                      {this.props.t("form.cta.remove")}
+                      Fjern denne gjesten
                     </button>
                     <button
                       className="form-btn"
                       type="button"
                       onClick={this.handleNext}
                     >
-                      {this.props.t("form.cta.continue")}
+                      Fortsett
                       <svg
                         width="16"
                         height="8"
@@ -407,7 +407,7 @@ class FormContainer extends React.Component {
         return (
           <a className="result__link" href={`/${this.props.t("langKey")}`}>
             <button className="form-btn" type="button">
-              {this.props.t("form.cta.home")}
+              Bryllupsdetaljer
               <svg
                 width="16"
                 height="8"

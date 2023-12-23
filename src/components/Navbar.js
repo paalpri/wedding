@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import languages from "../data/languages";
 import { getLangKey, getPath } from "../utils/getLangKey";
 import { withTranslation } from "react-i18next";
 import { useLocation } from "@reach/router";
+import Countdown from "./Countdown";
 
 function Navbar(props) {
   const location = useLocation();
@@ -51,22 +51,29 @@ function Navbar(props) {
             <Link className="navbar-item" to={`/location`}>
               Sted
             </Link>
+            {/*
             <Link className="navbar-item" to={`/accommodation`}>
               Overnatting
             </Link>
+             */}
+            {/*
             <Link className="navbar-item" to={`/activities`}>
               Aktiviteter
             </Link>
+            */}
             <Link className="navbar-item" to={`/rsvp`}>
               Svar på Invitasjon
             </Link>
+            {/*
             <Link className="navbar-item" to={`/faq`}>
               Ofte Stilte Spørsmål
             </Link>
+            */}
             <Link className="navbar-item" to={`/contact`}>
               Kontakt
             </Link>
           </div>
+          {/*  <Countdown className="has-text-centered mb-5 mr-2" />  */}
         </div>
       </div>
     </nav>

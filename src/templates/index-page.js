@@ -30,23 +30,30 @@ export const IndexPageTemplate = ({
       <FullWidthImage img={heroImage} subheading={date} />
       <section className="section section--gradient">
         <div className="container is-widescreen">
-          <Countdown className="has-text-centered mb-5" />
+
           <div className="columns">
             <div className="column is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop">
               <div className="content">
-                <div className="content has-text-centered">
+                <div className="content flex flex-col items-center">
                   <h2 className="title is-size-3 has-text-weight-semibold has-text-centered">
                     {mainpitch.title}
                   </h2>
-                  <div className="tile">
-                    <p className="subtitle">{mainpitch.description}</p>
+                  <div className="text-center flex flex-col justify-items-start items-center max-w-2xl text-lg text-black">
+                    <p className="font-bold">Kjære venner og familie,</p>
+                    <p>10.08.24 sier vi endelig JA til hverandre i Lensmannsløa her på vakre, vindfulle Jæren.</p>
+                    <p>Hvorfor Jæren tenker du? Jo- Da brudgommen er herifra og bruden har forelsket seg både i han og det nydelige landskapet (og ikke minst råvarene som finnes her) ble denne plassen et naturlig valg for oss når vi skulle finne en plass å feire kjærligheten.</p>
+                    <p>Selv om både vær og vind er ganske så uforutsigbart her borte på Vestlandet, kan vi likevel forutsi at dette vil bli en uforglemmelig dag, og vi håper dere vil dele den med oss. </p>
+                    <p>Så bli med å feire oss med en bryllupsfest som vil blåse dere av banen- muligens bokstavelig talt! </p>
+                    <p className="mt-4 flex flex-row italic text-base"><p className="text-base font-bold">NB!</p> Denne nettsiden inneholder all informasjon om vår store dag, så les i vei!
+                      Husk også å fylle inn RSVP skjemaet slik at vi vet om du vil ha muligheten til å komme.</p>
                   </div>
                 </div>
                 <div className="column is-8 mb-5" style={{ margin: "auto" }}>
                   <Zoom zoomMargin={40}>
                     <GatsbyImage
                       image={imageUs.childImageSharp.gatsbyImageData}
-                      alt={"Tenuta Larnianone"}
+                      alt={"us"}
+                      style={{ maxWidth: '600px', margin: 'auto', display: "block" }}
                     />
                   </Zoom>
                 </div>

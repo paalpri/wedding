@@ -87,10 +87,18 @@ export const ContactPageTemplate = ({
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                   {title}
                 </h2>
-                <div className="tile flex flex-column gap-2">
-                  <p>Har du spørsmål? Send Hedda eller Pål en melding på</p>
-                  <p>E-post: heddaist@live.no, primstadp@gmail.no</p>
-                  <p className="margin-bottom-2">Tlf: Hedda: 48194230 Pål: 99376055</p>
+                <div className="tile flex flex-column gap-2 mb-32">
+                  <p className="font-bold">Har du spørsmål?</p><p> Send Hedda eller Pål en melding på</p>
+                  <div className="flex flex-col">
+                    <p className="font-bold">E-post</p>
+                    <p> heddaist@live.no</p>
+                    <p> primstadp@gmail.com</p>
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="font-bold">Tlf</p>
+                    <p> Hedda: 48194230</p>
+                    <p> Pål: 99376055</p>
+                  </div>
                 </div>
               </div>
               {/*

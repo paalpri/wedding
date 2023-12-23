@@ -1,11 +1,10 @@
-const languages = require("./src/data/languages");
-
 module.exports = {
   siteMetadata: {
     title: "Bryllup på Jæren",
     description: "Hedda og påls bryllup på Jæren",
   },
   plugins: [
+    "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-no-index",
     {

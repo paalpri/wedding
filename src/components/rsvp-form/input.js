@@ -10,7 +10,7 @@ const Input = (props) => {
       <div className="form__controls">
         <div className="control__textbox-group">
           <label className="control__textbox-label" htmlFor="firstName">
-            {t("form.firstName")}
+            Fornavn
           </label>
           <input
             className="control__textbox-input"
@@ -21,12 +21,12 @@ const Input = (props) => {
             onChange={props.handleChange}
           />
           {props.isInvalidFirstName && (
-            <p className="is-error">{t("form.errors.firstNameRequired")}</p>
+            <p className="is-error">Fornavn er påkrevd.</p>
           )}
         </div>
         <div className="control__textbox-group">
           <label className="control__textbox-label" htmlFor="firstName">
-            {t("form.lastName")}
+            Etternavn
           </label>
           <input
             className="control__textbox-input"
@@ -37,12 +37,12 @@ const Input = (props) => {
             onChange={props.handleChange}
           />
           {props.isInvalidLastName && (
-            <p className="is-error">{t("form.errors.lastNameRequired")}</p>
+            <p className="is-error">Etternavn er påkrevd.</p>
           )}
         </div>
         <fieldset className="control__checkbox-fieldset">
           <legend className="control__checkbox-legend">
-            {t("form.willYouAttend")}
+            Vil du delta på bryllupet vårt?
           </legend>
 
           <div className="control__checkbox-group">
@@ -60,7 +60,7 @@ const Input = (props) => {
                 className="control__checkbox-description"
                 htmlFor="attend-1"
               >
-                <span className="control__checkbox-label">{t("form.yes")}</span>
+                <span className="control__checkbox-label">Ja</span>
               </label>
             </div>
             <div>
@@ -77,7 +77,7 @@ const Input = (props) => {
                 className="control__checkbox-description"
                 htmlFor="attend-0"
               >
-                <span className="control__checkbox-label">{t("form.no")}</span>
+                <span className="control__checkbox-label">Nei</span>
               </label>
             </div>
           </div>
@@ -86,7 +86,7 @@ const Input = (props) => {
               className="is-error"
               style={{ position: "relative", top: "-25px" }}
             >
-              {t("form.errors.attendingRequired")}
+              Vennligst svar om du vil delta.
             </p>
           )}
         </fieldset>
@@ -98,7 +98,7 @@ const Input = (props) => {
         >
           <fieldset className="control__checkbox-fieldset">
             <legend className="control__checkbox-legend">
-              {t("form.chooseFoodPreference")}
+              Velg din matpreferanse:
             </legend>
 
             <div className="control__checkbox-group">
@@ -117,7 +117,7 @@ const Input = (props) => {
                   htmlFor="meat-1"
                 >
                   <span className="control__checkbox-label">
-                    {t("form.meat")}
+                    Kjøtt 🥩
                   </span>
                 </label>
               </div>
@@ -136,7 +136,7 @@ const Input = (props) => {
                   htmlFor="meat-0"
                 >
                   <span className="control__checkbox-label">
-                    {t("form.veggie")}
+                    Vegetar 🥦
                   </span>
                 </label>
               </div>
@@ -146,7 +146,7 @@ const Input = (props) => {
                 className="is-error"
                 style={{ position: "relative", top: "-25px" }}
               >
-                {t("form.errors.eatingMeatRequired")}
+                Fortell oss hva du foretrekker å spise.
               </p>
             )}
           </fieldset>
@@ -156,13 +156,13 @@ const Input = (props) => {
               className="control__textbox-label"
               htmlFor="dietaryRestrictions"
             >
-              {t("form.foodAllergies")}
+              Har du noen matallergier eller intoleranser?
             </label>
             <label
               className="control__textbox-caption"
               htmlFor="dietaryRestrictions"
             >
-              ({t("form.foodAllergiesExamples")})
+              (For eksempel: Nøtter, gluten, sjømat, etc.)
             </label>
             <input
               className="control__textbox-input"
@@ -176,7 +176,7 @@ const Input = (props) => {
         </div>
         <div className="control__textbox-group">
           <label className="control__textbox-label" htmlFor="message">
-            {t("form.shortComment")}
+            Ønsker du å legge igjen en kort kommentar?
           </label>
           <textarea
             className="control__textbox-input"
