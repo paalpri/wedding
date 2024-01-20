@@ -1,10 +1,10 @@
 ---
-templateKey: "contact-page"
-title: Kontakt
+templateKey: "wishlist"
+title: Ønskeliste
 description: >
-  Har du spørsmål? Send Hedda eller Pål en melding på; E-post: heddaist@live.no, primstadp@gmail.no Tlf: Hedda: 48194230 Pål: 99376055  ! Du kan også kontakte oss direkte via WhatsApp. 🤗
+  This is currently not in use
 image: /img/logo.png
-subheading: Skriv en melding
+subheading: Ønskeliste
 formProps:
   email: E-post
   placeholderEmail: franz@münchinger.com

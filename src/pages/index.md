@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Hedda & Pål
 path: "/"
-image: /img/home-tuscany.jpg
+image: /img/logo.png
 imageUs: /img/justEngagedBorder.png
 date: 10. August 2024 på Jæren
 mainpitch:
@@ -18,10 +18,11 @@ mainpitch:
     Så bli med å feire oss med en bryllupsfest som vil blåse dere av banen- muligens bokstavelig talt!
 
     NB: Denne nettsiden inneholder all informasjon om vår store dag, så les i vei!
+    Dresscode: Pent (Dress/ Kjole), Ta med en genser til kvelden da låven ikke er godt isolert. 
 
     Husk også å fylle inn RSVP skjemaet slik at vi vet om du vil ha muligheten til å komme.
-heading: Bryllupsdagen
-subheading: Tidskjema
+heading: 09.08-10.08
+subheading: Bryllupsprogram
 intro:
   blurbs:
     - image: /img/barbeque.png
@@ -32,35 +33,30 @@ intro:
         Dresscode: Casual, men bruden setter pris på alle som møter opp i grilldress.
         Adresse: Røysvegen 11, 5355 Kvernaland
     - image: /img/ceremony.jpg
-      headline: Bli med på Vielse
-      subheading: 
+      headline: Lørdag - 14:30
+      subheading: Vielse
       text: >
         Seremonien starter 14:30. Oppmøte ved låven 14:00, finn plassene deres i første etg.1 i Lensmannsløa. 
     - image: /img/apertivo.jpg
-      headline: Hva med litt bobbler?
-      subheading: Og mingling
+      headline: Lørdag - 15:30
+      subheading: Bobler Og mingling
       text: >
-        From 15:30 blir det bobler, snacks, leker og mingling i hagen og gårdsplassen utenfor løao
+        Fra 15:30 blir det bobler, snacks, leker og mingling i Lensmannshagen
     - image: /img/thaiBuffet.png
-      headline: På tide me...
-      subheading: THAI!
+      headline: Lørdag - 17:00
+      subheading: Middag!
       text: >
-        I ekteparets ånd blir det en raus thai-buffet.     
-    - image: /img/weddingCake.png
-      headline: Dessert
-      subheading: Bonanza
-      text: >
-        19:30 blir det bryllupskake og dessertbord
+        I ekteparets ånd blir det en raus buffet med mat fra et av våre favorittkjøkken!     
     - image: /img/party.jpg
       headline: Let's get the party
       subheading: started!
       text: >
-        From 21:00 dimmer vi lysene, slår på diskokula og vrikker på dansefoten, håper dere blir med! 
-    - image: /img/party.jpg
+       Etter middag ca. klokken 21:00 dimmer vi lysene, slår på diskokula og vrikker på dansefoten, håper dere blir med! 
+    - image: /img/legge_meg.png
       headline: Nå går iallefall eg å
       subheading: legge meg
       text: >
-        From 02:00 kaster vi dere ut, for da går iallefall vi i lag med tønes å legger oss
+        Fra 02:00 kaster vi dere ut, for da går iallefall vi å legger oss, akkurat som Tønes (de som vet de vet)
   heading: Heading
 description: >
     Ting kan endre seg og det kommer mer og mer informasjon her, så titt inn av og til for å få med deg endringene som kommer

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
-  const imageStyle = { borderRadius: "5px", width: "100%" };
+  const imageStyle = { borderRadius: "5px", width: "100%", maxHeight: "350px", maxWidth: "370px" };
 
   const { alt = "", childImageSharp, image } = imageInfo;
 
@@ -21,6 +21,7 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
         image={childImageSharp.gatsbyImageData}
         style={imageStyle}
         alt={alt}
+
       />
     );
   } else if (image) {

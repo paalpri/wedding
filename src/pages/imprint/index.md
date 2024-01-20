@@ -2,7 +2,7 @@
 templateKey: "imprint-page"
 path: "/imprint"
 title: Impressum
-image: /img/home-tuscany.jpg
+image: /img/logo.png
 subheading: Generell informasjon
 ---
 

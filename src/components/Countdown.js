@@ -19,7 +19,7 @@ const Countdown = (props) => {
     <> 
       <h3
         className="counter has-text-centered"
-        style={{ fontSize: "30px" }}
+        style={{ fontSize: "25px" }}
         {...props}
       >
         <span>&nbsp;{browser && toCountdown({ until: "2024-08-10", t }) }</span>

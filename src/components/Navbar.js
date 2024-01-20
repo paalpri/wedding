@@ -51,18 +51,17 @@ function Navbar(props) {
             <Link className="navbar-item" to={`/location`}>
               Sted
             </Link>
-            {/*
             <Link className="navbar-item" to={`/accommodation`}>
               Overnatting
             </Link>
-             */}
-            {/*
             <Link className="navbar-item" to={`/activities`}>
               Aktiviteter
             </Link>
-            */}
+            <Link className="navbar-item" to={`/wishlist`}>
+               Ønskeliste
+            </Link>
             <Link className="navbar-item" to={`/rsvp`}>
-              Svar på Invitasjon
+                 Svar på Invitasjon
             </Link>
             {/*
             <Link className="navbar-item" to={`/faq`}>
@@ -73,7 +72,7 @@ function Navbar(props) {
               Kontakt
             </Link>
           </div>
-          {/*  <Countdown className="has-text-centered mb-5 mr-2" />  */}
+          <Countdown className="has-text-centered text-lg mb-5 mr-2" />
         </div>
       </div>
     </nav>

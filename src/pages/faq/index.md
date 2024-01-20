@@ -4,7 +4,7 @@ path: "/faq"
 title: Finn Svar
 description: >
   Vi har forberedt noen svar på ofte stilte spørsmål. Ta en titt, og hvis det fortsatt er noe uklart, kan dere bruke kontaktskjemaet eller kontakte oss direkte.
-image: /img/home-tuscany.jpg
+image: /img/logo.png
 subheading: Ofte Stilte Spørsmål
 questions:
   - question: Hva skal jeg ha på meg? Hvilken kleskode gjelder?

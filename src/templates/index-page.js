@@ -30,66 +30,59 @@ export const IndexPageTemplate = ({
       <FullWidthImage img={heroImage} subheading={date} />
       <section className="section section--gradient">
         <div className="container is-widescreen">
-
           <div className="columns">
             <div className="column is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop">
-              <div className="content">
-                <div className="content flex flex-col items-center">
+              <div className="content flex flex-col items-center justify-center">
+                <div className="content flex flex-col items-center justify-center">
                   <h2 className="title is-size-3 has-text-weight-semibold has-text-centered">
                     {mainpitch.title}
                   </h2>
                   <div className="text-center flex flex-col justify-items-start items-center max-w-2xl text-lg text-black">
                     <p className="font-bold">Kjære venner og familie,</p>
-                    <p>10.08.24 sier vi endelig JA til hverandre i Lensmannsløa her på vakre, vindfulle Jæren.</p>
+                    <p>10.08.24, klokka 14:30, sier vi endelig JA til hverandre i Lensmannsløa her på vakre, vindfulle Jæren.</p>
                     <p>Hvorfor Jæren tenker du? Jo- Da brudgommen er herifra og bruden har forelsket seg både i han og det nydelige landskapet (og ikke minst råvarene som finnes her) ble denne plassen et naturlig valg for oss når vi skulle finne en plass å feire kjærligheten.</p>
                     <p>Selv om både vær og vind er ganske så uforutsigbart her borte på Vestlandet, kan vi likevel forutsi at dette vil bli en uforglemmelig dag, og vi håper dere vil dele den med oss. </p>
                     <p>Så bli med å feire oss med en bryllupsfest som vil blåse dere av banen- muligens bokstavelig talt! </p>
+                    <p><p className="font-bold">Dresscode:</p> Pent (Dress/ Kjole), Ta med en genser til kvelden da låven ikke er godt isolert.
+                    </p>
                     <p className="mt-4 flex flex-row italic text-base"><p className="text-base font-bold">NB!</p> Denne nettsiden inneholder all informasjon om vår store dag, så les i vei!
                       Husk også å fylle inn RSVP skjemaet slik at vi vet om du vil ha muligheten til å komme.</p>
                   </div>
                 </div>
-                <div className="column is-8 mb-5" style={{ margin: "auto" }}>
+                <div className="">
                   <Zoom zoomMargin={40}>
                     <GatsbyImage
                       image={imageUs.childImageSharp.gatsbyImageData}
                       alt={"us"}
-                      style={{ maxWidth: '600px', margin: 'auto', display: "block" }}
+                      style={{ maxWidth: '600px'}}
                     />
                   </Zoom>
                 </div>
                 <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <h3
-                      style={{
-                        textTransform: "uppercase",
-                        position: "relative",
-                        top: "30px",
-                        right: "10%",
-                      }}
-                      className="has-text-weight-semibold is-size-4"
-                    >
-                      {heading}
-                    </h3>
+                  <div className="column is-12 has-text-centered my-10">
                     <p
                       style={{
                         position: "relative",
-                        left: "40px",
                         top: "-20px",
                         marginBottom: "-20px",
                       }}
-                      className="is-size-0-h font-northwell color-info"
+                      className="text-6xl lg:text-8xl mt-4 font-northwell color-info"
                     >
                       {subheading}
                     </p>
                   </div>
                 </div>
+                <div className="font-bold text-2xl">Kommer snart, sjekk inn nermere dagen</div>
+                <span className="font-bold text-2xl">Seremonien starter kl. 14:30</span>
+                {/*
                 <Features gridItems={intro.blurbs} />
+                */}
               </div>
             </div>
           </div>
-          <div className="columns">
+          <div className="">
             <div
-              className="column is-10 is-offset-1 has-text-centered"
+              className="is-offset-1 has-text-centered"
               dangerouslySetInnerHTML={{ __html: description }}
             />
           </div>

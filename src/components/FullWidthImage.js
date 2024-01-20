@@ -46,7 +46,7 @@ export default function FullWidthImage(props) {
             style={{
               gridArea: "1/1",
               // You can set a maximum height for the image, if you wish.
-              maxHeight: height,
+              maxHeight: "300px",
             }}
             layout="fullWidth"
             // You can optionally force an aspect ratio for the generated image
@@ -67,9 +67,10 @@ export default function FullWidthImage(props) {
               display: "grid",
             }}
           >
-            {/* Any content here will be centered in the component */}
-            {logo && <img src={logo} alt="Logo" width="400px" />}
-            {title && (
+            {/* Any content here will be centered in the component, currently commented out by the false */}
+            {logo && false && <img src={logo} alt="Logo" width="400px" />}
+            {
+                title && (
               <h1
                 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
                 style={{
@@ -80,8 +81,10 @@ export default function FullWidthImage(props) {
               >
                 {title}
               </h1>
-            )}
-            {subheading && (
+            )
+            }
+            {/*
+                subheading &  && (
               <h3
                 className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
                 style={{
@@ -93,7 +96,8 @@ export default function FullWidthImage(props) {
               >
                 {subheading}
               </h3>
-            )}
+            )
+            */}
           </div>
         )}
       </div>

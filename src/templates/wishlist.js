@@ -8,7 +8,7 @@ import FullWidthImage from "../components/FullWidthImage";
 import { Button, Form, Spinner } from "react-bootstrap";
 
 // eslint-disable-next-line
-export const ContactPageTemplate = ({
+export const WishlistTemplate = ({
   title,
   subheading,
   description,
@@ -16,65 +16,6 @@ export const ContactPageTemplate = ({
   formProps,
 }) => {
   const heroImage = getImage(image) || image;
-
-  const [loading, setLoading] = useState(false);
-  const [submissionError, setSubmissionError] = useState(false);
-  const [submissionSuccess, setSubmissionSuccess] = useState(false);
-  const [inputValue, setInputValue] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (event) => {
-    setInputValue({
-      ...inputValue,
-      [event.target.id]: event.target.value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const form = e.currentTarget;
-    if (form.checkValidity() === false) {
-      e.stopPropagation();
-    } else {
-      setLoading(true);
-      setSubmissionError(false);
-
-      try {
-        //Test http errors - https://httpstat.us/500
-        const response = await fetch("https://api.heddaogpal.no/contact", {
-          headers: {
-            "Content-Type": "application/json",
-            "X-API-KEY":
-              "86000ac1287f675172fa260cd9d25ea3af1ea146b9d07e5742d336107ac5e9e3",
-          },
-          method: "POST",
-          body: JSON.stringify({
-            name: inputValue.name,
-            email: inputValue.email,
-            message: inputValue.message,
-          }),
-        });
-
-        //In case of http errors
-        if (!response.ok) {
-          throw Error(response.statusText);
-        }
-
-        await response.json();
-        setLoading(false);
-        setSubmissionSuccess(true);
-
-        //In case of network errors
-      } catch (err) {
-        setLoading(false);
-        setSubmissionError(true);
-      }
-    }
-  };
 
   return (
     <>
@@ -87,27 +28,8 @@ export const ContactPageTemplate = ({
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                   {title}
                 </h2>
-                <div className="tile flex flex-column gap-2 mb-32">
-                  <p className="font-bold">Har du spørsmål?</p><p> Send Hedda eller Pål en melding på</p>
-                  <div className="flex flex-col">
-                    <p className="font-bold">E-post</p>
-                    <p> heddaist@live.no</p>
-                    <p> primstadp@gmail.com</p>
-                  </div>
-                  <div className="flex flex-col">
-                    <p className="font-bold">Tlf</p>
-                    <p> Hedda: 48194230</p>
-                    <p> Pål: 99376055</p>
-                  </div>
-                  <p className="font-bold">Vil du holde tale, innslag eller annet, kan du ta kontakt med kveldens
-                    toastmaster under, eller pål og hedda selvfølgelig!</p>
-
-                  <div className="flex flex-col">
-                    <h2>Toastmaster:</h2>
-                    <p className="font-bold">Svein Heskje</p>
-                    <p> tlf: 90059546</p>
-                    <p> Email: Svein.Heskje@cegal.com</p>
-                  </div>
+                <div className="tile flex flex-column gap-2 mb-80">
+                  <p className="font-bold">Coming soon!</p>
                 </div>
               </div>
               {/*
@@ -187,7 +109,7 @@ export const ContactPageTemplate = ({
   );
 };
 
-ContactPageTemplate.propTypes = {
+WishlistTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.object,
   subheading: PropTypes.string,
@@ -202,7 +124,7 @@ const ContactPage = ({ data }) => {
 
   return (
     <Layout>
-      <ContactPageTemplate
+      <WishlistTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         image={post.frontmatter.image}

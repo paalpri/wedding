@@ -1,26 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import ReactMarkdown from 'react-markdown';
 import Layout from "../components/Layout";
-import { HTMLContent } from "../components/Content";
 import { getImage } from "gatsby-plugin-image";
 import FullWidthImage from "../components/FullWidthImage";
-import Cards from "../components/Cards";
 import { Accordion } from "react-bootstrap";
-import Heading from "../components/Heading";
+import gfm from 'remark-gfm';
 
 // eslint-disable-next-line
 export const AccomodationPageTemplate = ({
   title,
   subheading,
   description,
-  information,
-  content,
   image,
-  contentComponent,
-  listTitle,
-  listSubtitle,
-  accommodations,
   questions,
 }) => {
   const heroImage = getImage(image) || image;
@@ -32,33 +25,18 @@ export const AccomodationPageTemplate = ({
         <div className="container is-widescreen">
           <div className="columns">
             <div className="column is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop">
-              <div className="content">
-                <div className="content has-text-centered">
-                  <h2 className="title is-size-3 has-text-weight-semibold has-text-centered">
+              <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col items-center justify-center gap-4">
+                  <h2 className="text-2xl">
                     {title}
                   </h2>
-                  <div className="tile">
-                    <p className="subtitle">{description}</p>
+                  <div className="flex flex-col prose lg:prose-xl justify-center">
+                    <ReactMarkdown remarkPlugins={[gfm]}>
+                      {description}
+                    </ReactMarkdown>
                   </div>
                 </div>
-
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Heading
-                      aboveText={listTitle}
-                      belowText={listSubtitle}
-                      colorClass="color-warning"
-                    />
-                  </div>
-                </div>
-                <Cards gridItems={accommodations} />
               </div>
-            </div>
-          </div>
-
-          <div className="column has-text-centered is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop mb-5">
-            <div className="tile">
-              <p className="subtitle">{information}</p>
             </div>
           </div>
 
@@ -87,12 +65,6 @@ AccomodationPageTemplate.propTypes = {
   image: PropTypes.object,
   subheading: PropTypes.string,
   description: PropTypes.string,
-  information: PropTypes.string,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-  listTitle: PropTypes.string,
-  listSubtitle: PropTypes.string,
-  accommodations: PropTypes.object,
   questions: PropTypes.object,
 };
 
@@ -102,16 +74,10 @@ const AccomodationPage = ({ data }) => {
   return (
     <Layout>
       <AccomodationPageTemplate
-        contentComponent={HTMLContent}
         title={post.frontmatter.title}
         description={post.frontmatter.description}
-        information={post.frontmatter.information}
         image={post.frontmatter.image}
         subheading={post.frontmatter.subheading}
-        content={post.html}
-        listTitle={post.frontmatter.listTitle}
-        listSubtitle={post.frontmatter.listSubtitle}
-        accommodations={post.frontmatter.accommodations}
         questions={post.frontmatter.questions}
       />
     </Layout>
@@ -132,7 +98,6 @@ export const accomodationPageQuery = graphql`
         title
         subheading
         description
-        information
         image {
           childImageSharp {
             gatsbyImageData(
@@ -141,18 +106,6 @@ export const accomodationPageQuery = graphql`
               placeholder: BLURRED
             )
           }
-        }
-        listTitle
-        listSubtitle
-        accommodations {
-          img {
-            childImageSharp {
-              gatsbyImageData(quality: 80, layout: CONSTRAINED)
-            }
-          }
-          name
-          description
-          url
         }
         questions {
           question

@@ -35,17 +35,17 @@ export const LocationPageTemplate = ({
             <div className="column is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop">
               <div className="content has-text-centered">
                 <Heading
-                  aboveText={handwrittenTitle}
-                  belowText={handwrittenSubtitle}
-                  colorClass="color-success"
+                    aboveText={handwrittenTitle}
+                    belowText={handwrittenSubtitle}
+                    colorClass="color-success"
                 />
                 <p className="subtitle  mb-5">{mainpitch.descriptionTuscany}</p>
               </div>
-              <div className="column is-8 mb-5" style={{ margin: "auto" }}>
+              <div className="column is-8 mb-5" style={{margin: "auto"}}>
                 <Zoom zoomMargin={40}>
                   <GatsbyImage
-                    image={images.imageVilla.childImageSharp.gatsbyImageData}
-                    alt={"Tenuta Larnianone"}
+                      image={images.imageLoa.childImageSharp.gatsbyImageData}
+                      alt={"Tenuta Larnianone"}
                   />
                 </Zoom>
               </div>
@@ -57,78 +57,61 @@ export const LocationPageTemplate = ({
                   <div className="column is-4 has-text-centered-mobile">
                     <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                       {title}
-                    </h2>
+                      </h2>
                     <div className="is-size-4">
-                      <h3 className="is-size-5">{address.name}</h3>
-                      <h4 className="is-size-1 font-northwell push-in color-info">
-                        {address.villa}
-                      </h4>
+                      <h2>{address.name}</h2>
                       <p>{address.street}</p>
                       <p>{address.city}</p>
                       <p>{address.country}</p>
                       <a
-                        className="is-size-6"
-                        href="https://goo.gl/maps/Svvok29DSFe7vwT47"
-                        target="_blank"
-                        rel="noreferrer"
+                          className="font-bold"
+                          href="https://maps.app.goo.gl/mPS8xz1jYZLjH52e9"
+                          target="_blank"
+                          rel="noreferrer"
                       >
                         <p>{address.linkToGoogle}</p>
                       </a>
-                      <a
-                        className="is-size-6"
-                        href="https://tenutalarnianone.com/villas/colombaio/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <p>{address.linkToTenuta}</p>
-                      </a>
                     </div>
                   </div>
+                  <div className="">
+                    <div className="">
+                      <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d277952.76999500714!2d5.141961852159782!3d58.729795104736446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463a3fe28f8d81f5%3A0xecb86549c18b4891!2sLensmannsl%C3%B8a!5e0!3m2!1sno!2sno!4v1704830239445!5m2!1sno!2sno"
+                          width="600"
+                          height="450"
+                          style={{border: 0}}
+                          allowFullScreen={true}
+                          loading="lazy"
+                          referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                  </div>
+                  {/*
                   <div className="column is-8">
                     <Zoom zoomMargin={40}>
                       <GatsbyImage
-                        image={
-                          images.imageTenuta.childImageSharp.gatsbyImageData
-                        }
-                        alt={"Tenuta Larnianone"}
+                          image={
+                            images.imageTenuta.childImageSharp.gatsbyImageData
+                          }
+                          alt={"Tenuta Larnianone"}
                       />
                     </Zoom>
                   </div>
+                  */}
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="columns mb-5">
-            <div className="column is-10-tablet is-offset-1-tablet is-6-desktop is-offset-3-desktop">
-              <Accordion>
-                {questions.map((item, i) => (
-                  <Accordion.Item eventKey={i}>
-                    <Accordion.Header>{item.question}</Accordion.Header>
-                    <Accordion.Body
-                      dangerouslySetInnerHTML={{ __html: item.answer }}
-                    ></Accordion.Body>
-                  </Accordion.Item>
-                ))}
-              </Accordion>
-            </div>
-          </div>
-          <div className="columns">
-            <div className="column is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop">
-              <PageContent
-                className="content has-text-centered"
-                content={content}
-              />
             </div>
           </div>
         </div>
       </section>
     </div>
-  );
+);
 };
 
 LocationPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  images: PropTypes.object,
+      images
+:
+  PropTypes.object,
   subheading: PropTypes.string,
   content: PropTypes.string,
   mainpitch: PropTypes.object,
@@ -137,8 +120,8 @@ LocationPageTemplate.propTypes = {
   questions: PropTypes.object,
 };
 
-const LocationPage = ({ data }) => {
-  const { markdownRemark: post } = data;
+const LocationPage = ({data}) => {
+  const {markdownRemark: post} = data;
 
   return (
     <Layout>
@@ -188,7 +171,7 @@ export const locationPageQuery = graphql`
               gatsbyImageData(quality: 80, layout: CONSTRAINED)
             }
           }
-          imageVilla {
+          imageLoa {
             childImageSharp {
               gatsbyImageData(quality: 80, layout: CONSTRAINED)
             }
@@ -200,12 +183,10 @@ export const locationPageQuery = graphql`
         }
         address {
           name
-          villa
           street
           city
           country
           linkToGoogle
-          linkToTenuta
         }
         questions {
           question

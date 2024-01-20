@@ -22,9 +22,6 @@ function Footer(props) {
               <section className="menu">
                 <ul className="menu-list is-flex-mobile m-0">
                   <li>
-                    <Link to={`/imprint`} className="navbar-item">
-                      Impressum og personvern
-                    </Link>
                   </li>
                 </ul>
               </section>
