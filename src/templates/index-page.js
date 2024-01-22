@@ -2,11 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Countdown from "../components/Countdown";
 import Zoom from "react-medium-image-zoom";
 import { HTMLContent } from "../components/Content";
 import Layout from "../components/Layout";
-import Features from "../components/Features";
 import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
@@ -39,7 +37,7 @@ export const IndexPageTemplate = ({
                   </h2>
                   <div className="text-center flex flex-col justify-items-start items-center max-w-2xl text-lg text-black">
                     <p className="font-bold">Kjære venner og familie,</p>
-                    <p>10.08.24, klokka 14:30, sier vi endelig JA til hverandre i Lensmannsløa her på vakre, vindfulle Jæren.</p>
+                    <p>10.08.24 klokka 14:30, sier vi endelig JA til hverandre i Lensmannsløa her på vakre, vindfulle Jæren.</p>
                     <p>Hvorfor Jæren tenker du? Jo- Da brudgommen er herifra og bruden har forelsket seg både i han og det nydelige landskapet (og ikke minst råvarene som finnes her) ble denne plassen et naturlig valg for oss når vi skulle finne en plass å feire kjærligheten.</p>
                     <p>Selv om både vær og vind er ganske så uforutsigbart her borte på Vestlandet, kan vi likevel forutsi at dette vil bli en uforglemmelig dag, og vi håper dere vil dele den med oss. </p>
                     <p>Så bli med å feire oss med en bryllupsfest som vil blåse dere av banen- muligens bokstavelig talt! </p>

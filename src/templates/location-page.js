@@ -7,7 +7,6 @@ import FullWidthImage from "../components/FullWidthImage";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import Accordion from "react-bootstrap/Accordion";
 import Heading from "../components/Heading";
 
 // eslint-disable-next-line
@@ -76,6 +75,7 @@ export const LocationPageTemplate = ({
                   <div className="">
                     <div className="">
                       <iframe
+                          title="google-maps-address"
                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d277952.76999500714!2d5.141961852159782!3d58.729795104736446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463a3fe28f8d81f5%3A0xecb86549c18b4891!2sLensmannsl%C3%B8a!5e0!3m2!1sno!2sno!4v1704830239445!5m2!1sno!2sno"
                           width="600"
                           height="450"

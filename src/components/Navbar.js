@@ -1,15 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import { getLangKey, getPath } from "../utils/getLangKey";
 import { withTranslation } from "react-i18next";
-import { useLocation } from "@reach/router";
 import Countdown from "./Countdown";
 
 function Navbar(props) {
-  const location = useLocation();
-
-  const langKey = getLangKey(location);
-  const path = getPath(location);
 
   const [active, setActive] = useState(false);
   const [navBarActiveClass, setNavBarActiveClass] = useState("");

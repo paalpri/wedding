@@ -1,10 +1,8 @@
 import React from "react";
 import Guest from "./guest";
 import FormFooter from "./form-footer";
-import { useTranslation } from "gatsby-plugin-react-i18next";
 
 const Summary = (props) => {
-  const { t } = useTranslation();
 
   return (
     <div className="form__body">

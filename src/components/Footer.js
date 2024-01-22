@@ -1,18 +1,6 @@
 import * as React from "react";
-import { Link } from "gatsby";
-
-import facebook from "../img/social/facebook.svg";
-import { getLangKey } from "../utils/getLangKey";
-import { useLocation } from "@reach/router";
-import { useTranslation } from "gatsby-plugin-react-i18next";
 
 function Footer(props) {
-  const location = useLocation();
-
-  const langKey = getLangKey(location);
-
-  const { t } = useTranslation();
-
   return (
     <footer className="footer has-background-black has-text-white-ter">
       <div className="content has-text-centered has-background-black has-text-white-ter">

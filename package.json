@@ -45,7 +45,7 @@
     "react-dom": "^17.0.0",
     "react-helmet": "^6.0.0",
     "react-i18next": "^11.16.9",
-    "react-markdown": "^9.0.1",
+    "react-markdown": "^8.0.7",
     "react-medium-image-zoom": "^4.4.0",
     "react-router-dom": "^6.3.0",
     "remark-gfm": "^4.0.0",
