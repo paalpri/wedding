@@ -24,13 +24,22 @@ export const WishlistTemplate = ({
         <div className="container is-widescreen">
           <div className="columns">
             <div className="column is-10-tablet is-offset-1-tablet is-8-desktop is-offset-2-desktop">
-              <div className="section pb-0">
+              <div className="section pb-0  mb-80">
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                   {title}
                 </h2>
-                <div className="tile flex flex-column gap-2 mb-80">
-                  <p className="font-bold">Coming soon!</p>
-                </div>
+                <div className="tile flex flex-column gap-2">
+                  <div className="text-xl">Under ligger lenken til vår ønskeliste. Mest av alt ønsker vi oss at dere kommer til Jæren for å feirer den store dagen med oss. MEN om dere likevel ønsker å gi oss noe så har vi lagt inn litt ønsker. Listen vil bli oppdatert løpende</div>
+                  <div className="tile font-bold flex flex-row gap-2 my-4 text-3xl mb-4">
+                    <div>Link: </div>
+                    <a href="https://onsk.no/lister/vq3-l9y" target="_blank" rel="noopener noreferrer"
+                       className="your-custom-class">Ønskeliste</a>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <div className="text-xl font-bold">Hvordan funker ønskelisten:</div>
+                    <div className="text-xl">Vi har laget ønskelisten i onsk.no. Her har man mulighet til å se samt reservere ønsker. Dersom dere ser et "ønske" dere gjerne vil gi oss, så kan dere klikke "Reserver" på den gitte tingen. På denne måten kan andre se at "ønsket" allerede er kjøpt.</div>
+                  </div>
+                  </div>
               </div>
               {/*
               <div className="section">

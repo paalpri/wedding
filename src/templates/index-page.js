@@ -25,7 +25,17 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <FullWidthImage img={heroImage} subheading={date} />
+      <div className="absolute text-orange-600 text-xl font-bold w-22 top-1/4 right-48 transform -translate-y-1/2 rotate-12">
+        <div className="flex flex-col gap-1 justify-center items-center">
+          <div>
+            Ønskeliste nå tilgjengelig
+          </div>
+          <div>
+              under "ønskeliste"
+          </div>
+        </div>
+      </div>
+      <FullWidthImage img={heroImage} subheading={date}/>
       <section className="section section--gradient">
         <div className="container is-widescreen">
           <div className="columns">
