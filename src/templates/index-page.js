@@ -25,7 +25,7 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <div className="absolute text-orange-600 text-xl font-bold w-22 top-1/4 right-48 transform -translate-y-1/2 rotate-12">
+      <div className="absolute text-orange-600 lg:text-xl font-bold w-22 z-50 top-4 left-4 lg:left-auto lg:top-96 2xl:top-1/4 lg:right-6 2xl:right-48 lg:transform lg:-translate-y-1/2 lg:rotate-12">
         <div className="flex flex-col gap-1 justify-center items-center">
           <div>
             Ønskeliste nå tilgjengelig

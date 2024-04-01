@@ -5,6 +5,8 @@ import Navbar from "../components/Navbar";
 import "./styles/all.scss";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
+import FullWidthImage from "./FullWidthImage";
+import {getImage} from "gatsby-plugin-image";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -46,7 +48,6 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar />
       <div>{children}</div>
-      <Footer />
     </>
   );
 };

@@ -38,7 +38,7 @@ function Navbar(props) {
           </div>
         </div>
         <div id="navMenu" className={`navbar-menu ${navBarActiveClass}`}>
-          <div className="navbar-start has-text-centered">
+          <div className="navbar-start has-text-centered text-xl">
             <Link className="navbar-item" to={`/`}>
               Hjem
             </Link>
@@ -66,7 +66,7 @@ function Navbar(props) {
               Kontakt
             </Link>
           </div>
-          <Countdown className="has-text-centered text-lg mb-5 mr-2" />
+          <Countdown className="has-text-centered text-lg mt-2.5 mb-2 mr-2" />
         </div>
       </div>
     </nav>

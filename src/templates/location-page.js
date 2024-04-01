@@ -73,12 +73,23 @@ export const LocationPageTemplate = ({
                     </div>
                   </div>
                   <div className="">
-                    <div className="">
+                    <div className="hidden lg:inline-flex">
                       <iframe
                           title="google-maps-address"
                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d277952.76999500714!2d5.141961852159782!3d58.729795104736446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463a3fe28f8d81f5%3A0xecb86549c18b4891!2sLensmannsl%C3%B8a!5e0!3m2!1sno!2sno!4v1704830239445!5m2!1sno!2sno"
                           width="600"
                           height="450"
+                          style={{border: 0}}
+                          allowFullScreen={true}
+                          loading="lazy"
+                          referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div className="lg:hidden">
+                      <iframe
+                          title="google-maps-address"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d277952.76999500714!2d5.141961852159782!3d58.729795104736446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463a3fe28f8d81f5%3A0xecb86549c18b4891!2sLensmannsl%C3%B8a!5e0!3m2!1sno!2sno!4v1704830239445!5m2!1sno!2sno"
+                          width="330"
+                          height="250"
                           style={{border: 0}}
                           allowFullScreen={true}
                           loading="lazy"
@@ -104,12 +115,12 @@ export const LocationPageTemplate = ({
         </div>
       </section>
     </div>
-);
+  );
 };
 
 LocationPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-      images
+  images
 :
   PropTypes.object,
   subheading: PropTypes.string,

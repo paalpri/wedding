@@ -30,7 +30,7 @@ export const WishlistTemplate = ({
                 </h2>
                 <div className="tile flex flex-column gap-2">
                   <div className="text-xl">Under ligger lenken til vår ønskeliste. Mest av alt ønsker vi oss at dere kommer til Jæren for å feirer den store dagen med oss. MEN om dere likevel ønsker å gi oss noe så har vi lagt inn litt ønsker. Listen vil bli oppdatert løpende</div>
-                  <div className="tile font-bold flex flex-row gap-2 my-4 text-3xl mb-4">
+                  <div className="font-bold flex flex-row gap-2 my-4 text-3xl mb-4">
                     <div>Link: </div>
                     <a href="https://onsk.no/lister/vq3-l9y" target="_blank" rel="noopener noreferrer"
                        className="your-custom-class">Ønskeliste</a>
