@@ -45,16 +45,28 @@ export const IndexPageTemplate = ({
                   <h2 className="title is-size-3 has-text-weight-semibold has-text-centered">
                     {mainpitch.title}
                   </h2>
-                  <div className="text-center flex flex-col justify-items-start items-center max-w-2xl text-lg text-black">
+                  <span className="font-bold text-2xl mb-1">Program lagt ut under!</span>
+                  <span className="font-bold text-2xl mb-10">Seremonien starter kl. 14:30</span>
+
+                  <div
+                      className="text-center flex flex-col justify-items-start items-center max-w-2xl text-lg text-black">
                     <p className="font-bold">Kjære venner og familie,</p>
-                    <p>10.08.24 klokka 14:30, sier vi endelig JA til hverandre i Lensmannsløa her på vakre, vindfulle Jæren.</p>
-                    <p>Hvorfor Jæren tenker du? Jo- Da brudgommen er herifra og bruden har forelsket seg både i han og det nydelige landskapet (og ikke minst råvarene som finnes her) ble denne plassen et naturlig valg for oss når vi skulle finne en plass å feire kjærligheten.</p>
-                    <p>Selv om både vær og vind er ganske så uforutsigbart her borte på Vestlandet, kan vi likevel forutsi at dette vil bli en uforglemmelig dag, og vi håper dere vil dele den med oss. </p>
-                    <p>Så bli med å feire oss med en bryllupsfest som vil blåse dere av banen- muligens bokstavelig talt! </p>
-                    <p><p className="font-bold">Dresscode:</p> Pent (Dress/ Kjole), Ta med en genser til kvelden da låven ikke er godt isolert.
+                    <p>10.08.24 klokka 14:30, sier vi endelig JA til hverandre i Lensmannsløa her på vakre, vindfulle
+                      Jæren.</p>
+                    <p>Hvorfor Jæren tenker du? Jo- Da brudgommen er herifra og bruden har forelsket seg både i han og
+                      det nydelige landskapet (og ikke minst råvarene som finnes her) ble denne plassen et naturlig valg
+                      for oss når vi skulle finne en plass å feire kjærligheten.</p>
+                    <p>Selv om både vær og vind er ganske så uforutsigbart her borte på Vestlandet, kan vi likevel
+                      forutsi at dette vil bli en uforglemmelig dag, og vi håper dere vil dele den med oss. </p>
+                    <p>Så bli med å feire oss med en bryllupsfest som vil blåse dere av banen- muligens bokstavelig
+                      talt! </p>
+                    <p><p className="font-bold">Dresscode:</p> Pent (Dress/ Kjole), Ta med en genser til kvelden da
+                      låven ikke er godt isolert.
                     </p>
-                    <p className="mt-4 flex flex-row italic text-base"><p className="text-base font-bold">NB!</p> Denne nettsiden inneholder all informasjon om vår store dag, så les i vei!
-                      Husk også å fylle inn RSVP skjemaet slik at vi vet om du vil ha muligheten til å komme.</p>
+                    <p className="mt-4 flex flex-row italic text-base"><p className="text-base font-bold">NB!</p> Denne
+                      nettsiden inneholder all informasjon om vår store dag, så les i vei!
+                      Husk også å fylle inn RSVP skjemaet slik at vi vet om du vil ha muligheten til å komme.
+                    </p>
                   </div>
                 </div>
                 <div className="">
