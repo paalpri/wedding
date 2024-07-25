@@ -7,6 +7,12 @@ The website was built with **React using Gatsby**, and is hosted as a **Static S
 
 ### Deploymnet
 
+Run project;
+use node 18 ; fnm use 18
+to install : yarn install
+start dev server: gatsby develop
+gatsby develop to start the dev server
+
 Sync s3 bucket:
 
 ```aws s3 sync public/ s3://hedda-og-pal-wedding-website```

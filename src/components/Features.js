@@ -10,7 +10,7 @@ const colorPalette = [
 ];
 
 const FeatureGrid = ({ gridItems }) => (
-  <div className="columns is-multiline">
+  <div className="columns is-multiline w-full">
     {gridItems.map((item, i) => (
       <div key={item.text} className="has-text-centered column is-12 mb-5">
         <section className="columns">
@@ -32,8 +32,8 @@ const FeatureGrid = ({ gridItems }) => (
             >
               {item.subheading}
             </span>
-            <p
-              className="is-size-4"
+            <span
+              className="text-xl"
               dangerouslySetInnerHTML={{ __html: item.text }}
             />
           </div>

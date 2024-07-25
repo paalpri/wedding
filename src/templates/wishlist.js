@@ -36,10 +36,16 @@ export const WishlistTemplate = ({
                        className="your-custom-class">Ønskeliste</a>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <div className="text-xl font-bold">Hvordan funker ønskelisten:</div>
-                    <div className="text-xl">Vi har laget ønskelisten i onsk.no. Her har man mulighet til å se samt reservere ønsker. Dersom dere ser et "ønske" dere gjerne vil gi oss, så kan dere klikke "Reserver" på den gitte tingen. På denne måten kan andre se at "ønsket" allerede er kjøpt.</div>
+                    <div className="text-xl font-bold">Hvordan fungerer ønskelisten:</div>
+                    <div className="text-xl">Vi har laget ønskelisten på onsk.no. Her kan dere se og reservere ønsker.
+                      Klikk "Reserver" på en ting dere vil gi oss, så kan andre se at ønsket allerede er reservert.
+                    </div>
+                    <div className="text-xl">OBS! For ting vi
+                      ønsker oss flere av, betyr reservert f.eks. 1/5. Du kan fortsatt reservere samme ting, og det vil
+                      stå "reservert av deg og en annen". Og om vi få flere enn oppgitt så er det bare bra!
+                    </div>
                   </div>
-                  </div>
+                </div>
               </div>
               {/*
               <div className="section">

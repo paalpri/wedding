@@ -1,114 +1,126 @@
-import React from "react";
+import React, { useRef } from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import {graphql, Link} from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Zoom from "react-medium-image-zoom";
 import { HTMLContent } from "../components/Content";
 import Layout from "../components/Layout";
 import FullWidthImage from "../components/FullWidthImage";
+import Features from "../components/Features";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
-  image,
-  imageUs,
-  title,
-  content,
-  contentComponent,
-  date,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
-}) => {
+                                    image,
+                                    imageUs,
+                                    title,
+                                    content,
+                                    contentComponent,
+                                    date,
+                                    heading,
+                                    subheading,
+                                    mainpitch,
+                                    description,
+                                    intro,
+                                  }) => {
   const heroImage = getImage(image) || image;
+  const programRef = useRef(null);
+
+  const handleScrollToProgram = () => {
+    programRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleClickWishlist = () => {
+
+  }
 
   return (
-    <div>
-      <div className="absolute text-orange-600 lg:text-xl font-bold w-22 z-50 top-4 left-4 lg:left-auto lg:top-96 2xl:top-1/4 lg:right-6 2xl:right-48 lg:transform lg:-translate-y-1/2 lg:rotate-12">
-        <div className="flex flex-col gap-1 justify-center items-center">
-          <div>
-            Ønskeliste nå tilgjengelig
-          </div>
-          <div>
-              under "ønskeliste"
-          </div>
-        </div>
-      </div>
-      <FullWidthImage img={heroImage} subheading={date}/>
-      <section className="section section--gradient">
-        <div className="container is-widescreen">
-          <div className="columns">
-            <div className="column is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop">
-              <div className="content flex flex-col items-center justify-center">
-                <div className="content flex flex-col items-center justify-center">
-                  <h2 className="title is-size-3 has-text-weight-semibold has-text-centered">
-                    {mainpitch.title}
-                  </h2>
-                  <span className="font-bold text-2xl mb-1">Program lagt ut under!</span>
-                  <span className="font-bold text-2xl mb-10">Seremonien starter kl. 14:30</span>
-
-                  <div
-                      className="text-center flex flex-col justify-items-start items-center max-w-2xl text-lg text-black">
-                    <p className="font-bold">Kjære venner og familie,</p>
-                    <p>10.08.24 klokka 14:30, sier vi endelig JA til hverandre i Lensmannsløa her på vakre, vindfulle
-                      Jæren.</p>
-                    <p>Hvorfor Jæren tenker du? Jo- Da brudgommen er herifra og bruden har forelsket seg både i han og
-                      det nydelige landskapet (og ikke minst råvarene som finnes her) ble denne plassen et naturlig valg
-                      for oss når vi skulle finne en plass å feire kjærligheten.</p>
-                    <p>Selv om både vær og vind er ganske så uforutsigbart her borte på Vestlandet, kan vi likevel
-                      forutsi at dette vil bli en uforglemmelig dag, og vi håper dere vil dele den med oss. </p>
-                    <p>Så bli med å feire oss med en bryllupsfest som vil blåse dere av banen- muligens bokstavelig
-                      talt! </p>
-                    <p><p className="font-bold">Dresscode:</p> Pent (Dress/ Kjole), Ta med en genser til kvelden da
-                      låven ikke er godt isolert.
-                    </p>
-                    <p className="mt-4 flex flex-row italic text-base"><p className="text-base font-bold">NB!</p> Denne
-                      nettsiden inneholder all informasjon om vår store dag, så les i vei!
-                      Husk også å fylle inn RSVP skjemaet slik at vi vet om du vil ha muligheten til å komme.
-                    </p>
+      <div>
+        <div className="absolute  lg:text-xl font-bold w-22 z-50 top-4 left-4 lg:left-auto lg:top-96 2xl:top-[500px] lg:right-6 2xl:right-48 lg:transform lg:-translate-y-1/2 lg:rotate-12">
+          <div className="flex flex-row gap-6">
+              <Link className="navbar-item" to={`/wishlist`}>
+                  <div className="flex flex-col gap-1 justify-center items-center text-orange-600">
+                      <div>Ønskeliste</div>
+                      <div>Klikk her!</div>
                   </div>
-                </div>
-                <div className="">
-                  <Zoom zoomMargin={40}>
-                    <GatsbyImage
-                      image={imageUs.childImageSharp.gatsbyImageData}
-                      alt={"us"}
-                      style={{ maxWidth: '600px'}}
-                    />
-                  </Zoom>
-                </div>
-                <div className="columns">
-                  <div className="column is-12 has-text-centered my-10">
-                    <p
-                      style={{
-                        position: "relative",
-                        top: "-20px",
-                        marginBottom: "-20px",
-                      }}
-                      className="text-6xl lg:text-8xl mt-4 font-northwell color-info"
-                    >
-                      {subheading}
-                    </p>
-                  </div>
-                </div>
-                <div className="font-bold text-2xl">Kommer snart, sjekk inn nermere dagen</div>
-                <span className="font-bold text-2xl">Seremonien starter kl. 14:30</span>
-                {/*
-                <Features gridItems={intro.blurbs} />
-                */}
-              </div>
+              </Link>
+              <div className="flex flex-col gap-1 justify-center items-center text-blue-600 is-clickable"
+                   onClick={handleScrollToProgram}>
+                  <div>Program</div>
+                  <div>klikk her!</div>
             </div>
           </div>
-          <div className="">
-            <div
-              className="is-offset-1 has-text-centered"
-              dangerouslySetInnerHTML={{ __html: description }}
-            />
-          </div>
         </div>
-      </section>
-    </div>
+        <FullWidthImage img={heroImage} subheading={date}/>
+        <section className="section section--gradient">
+          <div className="container is-widescreen">
+            <div className="columns">
+              <div className="column is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop">
+                <div className="content flex flex-col items-center justify-center">
+                  <div className="content flex flex-col items-center justify-center">
+                    <h2 className="title is-size-3 has-text-weight-semibold has-text-centered">
+                      {mainpitch.title}
+                    </h2>
+                    <a className="font-bold text-2xl mb-1 underline" onClick={handleScrollToProgram}>Program ligger under</a>
+                    <span className="font-bold text-2xl mb-10">Seremonien starter kl. 14:30</span>
+
+                    <div
+                        className="text-center flex flex-col justify-items-start items-center max-w-2xl text-lg text-black">
+                      <p className="font-bold">Kjære venner og familie,</p>
+                      <p>10.08.24 klokka 14:30, sier vi endelig JA til hverandre i Lensmannsløa her på vakre, vindfulle
+                        Jæren.</p>
+                      <p>Hvorfor Jæren tenker du? Jo- Da brudgommen er herifra og bruden har forelsket seg både i han og
+                        det nydelige landskapet (og ikke minst råvarene som finnes her) ble denne plassen et naturlig valg
+                        for oss når vi skulle finne en plass å feire kjærligheten.</p>
+                      <p>Selv om både vær og vind er ganske så uforutsigbart her borte på Vestlandet, kan vi likevel
+                        forutsi at dette vil bli en uforglemmelig dag, og vi håper dere vil dele den med oss. </p>
+                      <p>Så bli med å feire oss med en bryllupsfest som vil blåse dere av banen- muligens bokstavelig
+                        talt! </p>
+                      <p><p className="font-bold">Dresscode:</p> Pent (Dress/ Kjole), Ta med en genser til kvelden da
+                        låven ikke er godt isolert.
+                      </p>
+                      <p className="mt-4 flex flex-row italic text-base"><p className="text-base font-bold">NB!</p> Denne
+                        nettsiden inneholder all informasjon om vår store dag, så les i vei!
+                        Husk også å fylle inn RSVP skjemaet slik at vi vet om du vil ha muligheten til å komme.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="">
+                    <Zoom zoomMargin={40}>
+                      <GatsbyImage
+                          image={imageUs.childImageSharp.gatsbyImageData}
+                          alt={"us"}
+                          style={{ maxWidth: '600px'}}
+                      />
+                    </Zoom>
+                  </div>
+                  <div ref={programRef} className="columns ">
+                    <div className="column is-12 has-text-centered my-10">
+                      <p
+                          style={{
+                            position: "relative",
+                            top: "-20px",
+                            marginBottom: "-20px",
+                          }}
+                          className="text-6xl lg:text-8xl mt-4 font-northwell color-info"
+                      >
+                        {subheading}
+                      </p>
+                    </div>
+                  </div>
+                  <Features gridItems={intro.blurbs} />
+
+                </div>
+              </div>
+            </div>
+            <div className="">
+              <div
+                  className="is-offset-1 has-text-centered"
+                  dangerouslySetInnerHTML={{ __html: description }}
+              />
+            </div>
+          </div>
+        </section>
+      </div>
   );
 };
 
@@ -131,21 +143,21 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout>
-      <IndexPageTemplate
-        image={frontmatter.image}
-        imageUs={frontmatter.imageUs}
-        content={frontmatter.html}
-        contentComponent={HTMLContent}
-        title={frontmatter.title}
-        date={frontmatter.date}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-      />
-    </Layout>
+      <Layout>
+        <IndexPageTemplate
+            image={frontmatter.image}
+            imageUs={frontmatter.imageUs}
+            content={frontmatter.html}
+            contentComponent={HTMLContent}
+            title={frontmatter.title}
+            date={frontmatter.date}
+            heading={frontmatter.heading}
+            subheading={frontmatter.subheading}
+            mainpitch={frontmatter.mainpitch}
+            description={frontmatter.description}
+            intro={frontmatter.intro}
+        />
+      </Layout>
   );
 };
 
